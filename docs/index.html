@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head lang="ja">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta description="おはララジェネレータはゲームのスクリーンショットにロゴを載せるためのアプリです。FINAL FANTASY XIVのスクリーンショットでテストしています。">
+		<title>エウレカNM討伐時間管理 マージ機能</title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="main.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101529000-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-101529000-7');
+</script>
+
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>エウレカNM討伐時間管理 マージ機能</h1>
+				<p id="comment">むーむーさん作NM討伐時間管理のデータの旧データと更新データのマージを行います。</p>
+				<p>むーむーさん作のNM討伐時間管理アプリは<a href="http://ff14moo.moo.jp/eureka_nm_timekeeper.html" target="_blank">こちら</a>になります。</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="alert alert-success">Step1.(必須) ログに残っている古いログデータを貼り付けます</div>
+			<textarea class="form-control" id="log1" placeholder="例) ジュリカ[15:57]、ポリュ[16:13]、シムルグ[16:27]、ファヴ[16:45]、ハズマ[16:51]、タコ[17:10]、カイム[17:25]、パズズ[17:34]、ジャハン[17:43]、アミメ[18:00]、エンペラ[18:01]、テレス[18:11]、カリスト[18:27]、Wライダ[18:35]、ボンバ[18:41]、ナンバ[18:45]、セルケト[18:51]" rows="10"></textarea>
+			<br />
+			<div class="alert alert-success">Step2.(必須) 最近のデータを貼り付けます</div>
+			<textarea class="form-control" id="log2" placeholder="例) ジュリカ[18:16]、タコ[19:16]、サボテン[20:16]" rows="10"></textarea>
+			<br />
+			<div class="alert alert-success">Step3.(必須) 貼り付けたあとマージボタンを押してください。</div>
+			<button id="merge" class="btn btn-primary">マージ</button>
+			<div class="alert alert-success">マージ結果がこちらになります</div>
+			<textarea class="form-control" id="logresult" placeholder="" rows="10"></textarea>
+			<br />
+			<p>広告</p>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- エウレカNM討伐時間管理 マージ機能 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9341622472626262"
+     data-ad-slot="1389584080"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			<hr />
+		</div>
+
+		<br />
+
+		<div class="jumbotron">
+			<div class="container">
+				<h3>使い方</h3>
+				<ul>
+					<li>むーむーさんのアプリで生成したNM報告ログの2つをマージします。</li>
+					<li>マージ結果はむーむーさんのアプリでインポート可能です。またそのままシャウトすることも可能です。</li>
+				</ul>
+			</div>
+		</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h3>謝辞</h3>
+				<ul>
+					<li><a href="http://ff14moo.moo.jp/eureka_nm_timekeeper.html" target="_blank">むーむーのネタ帳</a></li>
+					<li>エウレカでNM管理をしていただいているみなさま</li>
+					<li>ちょっとでもこのアプリに興味を持っていただいたみなさま</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="jumbotron">
+			<div class="container">
+				<h3>本ツールについて</h3>
+				<ul>
+					<li>本ツールはむーむーさんのアプリによるNM討伐報告ログにのみ対応しています。</li>
+					<li>ソースコードはGithub上で公開しています。<a href="https://github.com/gelehrtecrest/eureka-nm-merge" target="_blank">https://github.com/gelehrtecrest/eureka-nm-merge</a></li>
+					<li>本ツールのclone及び可変・再配布などはご自由に。</li>
+					<li>その他お問い合わせなどは <a href="https://twitter.com/gelehrte_crest" target="_blank">@gelehrte_crest</a>へレスもしくはDMお願いします。</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="jumbotron">
+			<div class="container">
+				<h3>更新履歴</h3>
+				<ul>
+					<li> 2017/05/15 公開開始</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
